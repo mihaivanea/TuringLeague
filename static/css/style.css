@@ -1,0 +1,171 @@
+body {
+    /*background-color: #ccccee*/
+    background-image: url("../seigaiha.png");
+}
+
+@media (max-width: 979px) {
+    body {
+            padding-top: 0px;
+    }
+}
+
+.jumbotron {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/92/TOPIO_3.jpg");
+    color: #ffffff;
+    height: 100vh;
+    -webkit-transition: 1s;
+    margin-bottom: 0px;
+}
+
+#jumbo-title {
+    margin-top: 100px;
+    -webkit-transition: 1s;
+}
+
+#nickname-input {
+    margin-right: 15px;
+}
+
+#chat-panel {
+    background-color: #222222;
+    border-bottom: #222222;
+}
+
+.panel {
+    border-color: #222222;
+}
+
+.chat
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chat li
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #B3A9A9;
+}
+
+.chat li.left .chat-body
+{
+    margin-left: 60px;
+}
+
+.chat li.right .chat-body
+{
+    margin-right: 60px;
+}
+
+
+.chat li .chat-body p
+{
+    margin: 0;
+    color: #777777;
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+    margin-right: 5px;
+}
+
+.panel-body
+{
+    overflow-y: scroll;
+    height: 450px;
+}
+
+.side-chat {
+    font-size: 18px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #444444;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+} 
+
+.progress-text {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+#btn-yes:focus {
+    outline: 0;
+}
+
+#btn-no:focus {
+    outline: 0;
+}
+
+#btn-start:focus {
+    outline: 0;
+}
+
+.score-row {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 30px;
+    background-color: #555555;
+    color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.score-rank {
+    border-right: 1px solid black;
+}
+
+.score-points {
+    border-left: 1px solid black;
+}
+
+.score-name {
+    background-color: #efefef;
+    color: #000000;
+}
+
+#score-title {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+#score-first {
+    background-color: gold;
+    color: #000000;
+}
+
+#score-second {
+    background-color: silver;
+    color: #000000;
+}
+
+#score-third {
+    background-color: #cd7f32;
+    color: #000000;
+}

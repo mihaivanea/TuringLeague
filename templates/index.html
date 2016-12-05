@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Turing League</title>
+
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+
+  </head>
+  <body style="font-family: 'Titillium Web', sans-serif;">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Turing League</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="{{ url_for('highscores')}}">High Scores</a></li>
+                <li><a href="{{ url_for('bots')}}">Bot Leaderboards</a></li>
+            </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+     <div class="jumbotron text-center">
+      <div class="container">
+        <h1 id="jumbo-title">Turing League</h1>
+        <p>Bot or Not?</p>
+        <p> <div id="nickname-field">
+            <div class="row" style="margin-top: 100px;">
+                <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <input id="nickname-input" type="text" class="form-control input-lg" placeholder="Nickname" style="margin-bottom: 30px">
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-lg" id="btn-start" href="#" role="button">Start chatting</button>
+            </div>
+        </p>
+      </div>
+    </div> 
+
+    <div class="container-fluid" id="main-chat">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-8">
+                <div class="panel panel-primary">
+                    <div class="panel-heading" id="chat-panel">
+                        <span class="glyphicon glyphicon-comment"></span> Chat
+                    </div>
+                    <div class="panel-body" id="chat-body">
+                        <ul class="chat">
+                        </ul>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="input-group">
+                            <input id="btn-input" type="text" class="form-control" placeholder="Talk...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-warning btn-sm" id="btn-chat">Send</button>
+                            </span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row side-chat">
+                        <p class="text-center">Time left: </p>
+                        <div class="progress progress-striped">
+                            <div class="progress-bar" style="width: 100%;" id="time-bar">
+                                <span class="progress-text" id="time-val">20</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row side-chat">
+                    <p class="text-center">Responses left: </p>
+                    <div class="progress progress-striped">
+                        <div class="progress-bar progress-bar-info" style="width: 100%;" id="responses-bar">
+                            <span class="progress-text" id="responses-val">10</span>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row side-chat" id="is-bot-dialog">
+                        <p class="text-center">Is this a bot?</p>
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <button type="button" class="btn btn-primary btn-lg" id="btn-yes">Yes</button>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <button type="button" class="btn btn-primary btn-lg" id="btn-no">No</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row side-chat" id="play-again">
+                        <div class="col-md-12 text-center">
+                            <button type="button" class="btn btn-primary btn-lg" id="btn-play-again">Play Again</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script src="{{ url_for('static', filename='js/index.js')}}"></script>
+  </body>
+</html>
